@@ -1,3 +1,5 @@
 dockerfile.*
 *.yml
 .dockerignore
+.git
+.gitignore
