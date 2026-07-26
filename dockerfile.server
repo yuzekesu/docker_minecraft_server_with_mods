@@ -1,0 +1,13 @@
+FROM debian:latest
+
+WORKDIR /server
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends wget ca-certificates default-jre
+
+COPY . .
+
+RUN java -jar *.jar --installServer \
+    && echo "eula=true" > eula.txt
+
+CMD ["bash", "-lc", "java -Xms4G -Xmx6G -jar *server*.jar nogui"]
