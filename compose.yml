@@ -10,4 +10,9 @@ services:
     ports:
       - "25565:25565"
     volumes:
-      - /minecraft-server:/server
+      - mods:/server/mods
+      - world:/server/world
+
+volumes:
+  mods:
+  world:
