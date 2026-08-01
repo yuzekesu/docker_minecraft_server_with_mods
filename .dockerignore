@@ -3,4 +3,3 @@ dockerfile.*
 .dockerignore
 .git
 .gitignore
-mods/.put_your_mods_here
